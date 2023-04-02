@@ -10,6 +10,10 @@ const Login = () => {
  
   const loginForm = useFormik({
     initialValues: {
+      
+      email:'',
+      password:'',
+      
 
     },
     onSubmit: async (formdata) => {
@@ -50,7 +54,7 @@ const Login = () => {
             <img src="/logo.png" className="img-fluid" alt="Sample image" />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form>
+            <form onSubmit={loginForm.handleSubmit}>
               <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                 <p className="lead fw-normal mb-0 me-3">Sign in with</p>
                 <button type="button" className="btn  btn-floating mx-1">
@@ -72,7 +76,9 @@ const Login = () => {
               </label>
               <input
                 type="email"
-                id="form3Example3"
+                id="email"
+                value={loginForm.values.email}
+                onChange={loginForm.handleChange}
                 className="form-control form-control-lg"
                 placeholder="Enter a valid email address"
               />
@@ -82,7 +88,9 @@ const Login = () => {
               </label>
               <input
                 type="password"
-                id="form3Example4"
+                id="password"
+                value={loginForm.values.password}
+                onChange={loginForm.handleChange}
                 className="form-control form-control-lg"
                 placeholder="Enter password"
               />
