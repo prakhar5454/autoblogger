@@ -24,7 +24,7 @@
     transform: scale(1.5);   
 }
 .blogheader{
-    background-image:url("../main/photo/pexels-pixabay-262508.jpg");
+    /* background-image:url("../main/photo/pexels-pixabay-262508.jpg"); */
     height:60vh;
     background-size:cover;
     background-position:center; 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import app_config from "../../config";
-import Loading from "../main/Loading";
+// import Loading from "../main/Loading";
 import "./BlogManager.css";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
@@ -49,7 +49,8 @@ const BlogManager = () => {
     if (loading) {
       return (
         <div className="text-center ">
-          <Loading className="text-lg"/>
+          {/* <Loading className="text-lg"/> */}
+          <h1>Loading ...</h1>
         </div>
           
       );

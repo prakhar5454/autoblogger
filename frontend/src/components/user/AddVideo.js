@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
-import Loading from "../main/Loading";
+// import Loading from "../main/Loading";
 import { motion } from "framer-motion";
 
 const AddVideo = () => {
@@ -156,7 +156,8 @@ const AddVideo = () => {
                     Submit
                   </button>
                 ) : (
-                  <Loading></Loading>
+                  // <Loading></Loading>
+                  <h1>Loading ...</h1>
                 )}
               </div>
             </form>

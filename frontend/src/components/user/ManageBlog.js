@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import app_config from "../../config";
-import Loading from "../main/Loading";
+// import Loading from "../main/Loading";
 import "./VideoManager.css";
 import { motion } from "framer-motion";
 
@@ -87,7 +87,8 @@ const ManageBlog = () => {
     } else {
       return (
         <div className="text-center">
-          <Loading></Loading>
+          {/* <Loading></Loading> */}
+          <h1>Loading ...</h1>
         </div>
       );
     }
