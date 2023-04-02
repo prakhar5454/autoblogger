@@ -114,7 +114,7 @@ const Login = () => {
               </div>
               <div className="text-center text-lg-start mt-4 pt-2">
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-danger  btn-lg"
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                 >
