@@ -20,7 +20,7 @@ const router = require("express").Router();
 
 const { Deepgram } = require("@deepgram/sdk");
 const { SMTPClient } = require("emailjs");
-const deepgram = new Deepgram("f440f8b87b0f8415873d44c83884f71374aa158a");
+const deepgram = new Deepgram("286a1ed93908edba3ebe70f8b21fddddb1d53f0f");
 const fs = require("fs");
 const videoModel = require("../models/videoModel");
 

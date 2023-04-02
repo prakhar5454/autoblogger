@@ -1,8 +1,7 @@
 //importing mongoose package
 const mongoose = require('mongoose'); //req
 
-const dbname = 'ustoredatabase';
-const url= `mongodb+srv://Ayushi123:rayayu123@cluster0.aa5jg.mongodb.net/${dbname}?retryWrites=true&w=majority`
+const url= `mongodb+srv://prakver9:prakhar@cluster0.praik4n.mongodb.net/autoblogger?retryWrites=true&w=majority`
 
 //async function - returns promise
 mongoose.connect(url)
