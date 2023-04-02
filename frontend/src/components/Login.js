@@ -72,7 +72,7 @@ const Login = () => {
           <div className="text-center text-lg-start mt-4 pt-2">
             <button
               type="button"
-              className="btn  btn-lg"
+              className="btn btn-danger  btn-lg"
               style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
             >
               Login
@@ -88,7 +88,7 @@ const Login = () => {
       </div>
     </div>
   </div>
-  <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 dark bg-dark">
+  <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 dark bg-danger">
     {/* Copyright */}
     <div className="text-white mb-3 mb-md-0">
       Copyright © 2020. All rights reserved.
