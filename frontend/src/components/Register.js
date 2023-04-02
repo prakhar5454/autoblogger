@@ -1,9 +1,53 @@
 import React from 'react';
 import './register.css';
+import { useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import Swal from 'sweetalert2';
+
 
 const Register = () => {
-  return (
-    <section className="vh-100 bg-image reg-back" >
+ 
+    const navigate = useNavigate();
+ 
+  const registerForm = useFormik({
+    initialValues: {
+      
+      email: String,
+    username: String,
+    password: String,
+
+    },
+    onSubmit: async (formdata) => {
+      console.log(formdata);
+  
+      const response = await fetch("http://localhost:5000/user/authenticate", {
+        method: "POST",
+        body: JSON.stringify(formdata), //converting javascript object to json
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (response.status === 200) {
+        response.json().then(data => {
+          console.log(data);
+          sessionStorage.setItem('user', JSON.stringify(data));
+          
+          Swal.fire({
+            icon: "success",
+            title: "Login Successful",
+            text: "You have done a wonderful job!",
+          }).then(() => {
+            navigate('/user/managevideo');
+          })
+        })
+      } else {
+        console.log("error occured");
+      }
+    }
+  })
+
+  return (  <section className="vh-100 bg-image reg-back" >
   <div className="mask d-flex align-items-center h-100">
     <div className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
@@ -19,7 +63,9 @@ const Register = () => {
                   </label>
                   <input
                     type="text"
-                    id="form3Example1cg"
+                    id="username"
+                    value={registerForm.values.username}
+                    onChange={registerForm.handleChange}
                     className="form-control form-control-lg"
                   />
                   
@@ -29,7 +75,9 @@ const Register = () => {
                   </label>
                   <input
                     type="email"
-                    id="form3Example3cg"
+                    id="email"
+                    value={registerForm.values.email}
+                    onChange={registerForm.handleChange}
                     className="form-control form-control-lg"
                   />
                   
@@ -39,7 +87,9 @@ const Register = () => {
                   </label>
                   <input
                     type="password"
-                    id="form3Example4cg"
+                    id="password"
+                    value={registerForm.values.password}
+                    onChange={registerForm.handleChange}
                     className="form-control form-control-lg"
                   />
                  
