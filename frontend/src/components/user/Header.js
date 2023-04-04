@@ -35,7 +35,7 @@ const Header = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <NavLink className="navbar-brand mt-2 mt-lg-0" to="/">
-            <img src="web-article.png" height="45" alt=" Logo" loading="lazy" />
+            <img src="/logo.png" height="45" alt=" Logo" loading="lazy" />
           </NavLink>
 
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">

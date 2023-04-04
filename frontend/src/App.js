@@ -17,74 +17,77 @@ import ViewBlog from "./components/blog/ViewBlog";
 import ListBlog from "./components/blog/ListBlog";
 import VideoManager from "./components/user/VideoManager";
 import AddVideo from "./components/user/AddVideo";
+import UserProvider from "./context/UserProvider";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Navigate to="/Login" />} />
-          <Route path="login" element={<Login />} />
-          <Route path="contact us" element={<Contactus />} />
-          <Route path="register" element={<Register />} />
+        <UserProvider>
+          {/* <Navbar /> */}
+          <Routes>
+            <Route path="/" element={<Navigate to="/Login" />} />
+            <Route path="login" element={<Login />} />
+            <Route path="contact us" element={<Contactus />} />
+            <Route path="register" element={<Register />} />
 
-          <Route
-            element={
-              <Authorizer>
-                <User />
-              </Authorizer>
-            }
-            path="user"
-          >
-            <Route path="profile" element={<UserProfile />} />
-            <Route path="manageblog" element={<ManageBlog />} />
             <Route
-              path="addblog"
               element={
                 <Authorizer>
-                  <AddBlog />
+                  <User />
                 </Authorizer>
               }
-            />
-            <Route path="managevideo" element={<VideoManager />} />
-            <Route path="addvideo" element={<AddVideo />} />
-          </Route>
+              path="user"
+            >
+              <Route path="profile" element={<UserProfile />} />
+              <Route path="manageblog" element={<ManageBlog />} />
+              <Route
+                path="addblog"
+                element={
+                  <Authorizer>
+                    <AddBlog />
+                  </Authorizer>
+                }
+              />
+              <Route path="managevideo" element={<VideoManager />} />
+              <Route path="addvideo" element={<AddVideo />} />
+            </Route>
 
-          <Route element={<Blog />} path="blog">
-            <Route
-              element={
-                <Authorizer>
-                  <AddBlog />
-                </Authorizer>
-              }
-              path="addblog/:videoid"
-            />
-            <Route
-              element={
-                <Authorizer>
-                  <BlogManager />
-                </Authorizer>
-              }
-              path="blogmanager/:id"
-            />
-            <Route
-              element={
-                <Authorizer>
-                  <ViewBlog />
-                </Authorizer>
-              }
-              path="viewblog/:id"
-            />
-            <Route element={<ListBlog></ListBlog>} path="listblog"></Route>
-            <Route element={<AddBlog></AddBlog>} path="addblog"></Route>
-            <Route element={<ViewBlog></ViewBlog>} path="viewblog"></Route>
-            <Route
-              element={<BlogManager></BlogManager>}
-              path="blogmanager"
-            ></Route>
-          </Route>
-        </Routes>
+            <Route element={<Blog />} path="blog">
+              <Route
+                element={
+                  <Authorizer>
+                    <AddBlog />
+                  </Authorizer>
+                }
+                path="addblog/:videoid"
+              />
+              <Route
+                element={
+                  <Authorizer>
+                    <BlogManager />
+                  </Authorizer>
+                }
+                path="blogmanager/:id"
+              />
+              <Route
+                element={
+                  <Authorizer>
+                    <ViewBlog />
+                  </Authorizer>
+                }
+                path="viewblog/:id"
+              />
+              <Route element={<ListBlog></ListBlog>} path="listblog"></Route>
+              <Route element={<AddBlog></AddBlog>} path="addblog"></Route>
+              <Route element={<ViewBlog></ViewBlog>} path="viewblog"></Route>
+              <Route
+                element={<BlogManager></BlogManager>}
+                path="blogmanager"
+              ></Route>
+            </Route>
+          </Routes>
+        </UserProvider>
       </BrowserRouter>
     </div>
   );

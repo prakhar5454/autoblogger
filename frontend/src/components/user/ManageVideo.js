@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import Addvideo from "./Addvideo";
+import Addvideo from "./AddVideo";
 import app_config from "../../config";
 
 const ManageVideo = () => {

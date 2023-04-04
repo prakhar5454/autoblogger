@@ -41,6 +41,11 @@ const Login = () => {
           })
         })
       } else {
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: "Email or Password is incorrect!",
+        })
         console.log("error occured");
       }
     }
