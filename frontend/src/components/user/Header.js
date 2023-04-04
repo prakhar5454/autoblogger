@@ -15,7 +15,7 @@ const Header = () => {
   const url = app_config.api_url;
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark"
+      className="navbar navbar-expand-lg navbar-succes"
       style={{
         backgroundColor: `#01b79f`,
       }}
@@ -85,7 +85,7 @@ const Header = () => {
               aria-expanded="false"
             >
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                src="/settings.png"
                 className="rounded-circle"
                 height="25"
                 alt="Black and White Portrait of a Man"

@@ -119,7 +119,7 @@ const Register = () => {
                     <div className="d-flex justify-content-center">
                       <button
                         type="submit"
-                        className="btn dark bg-dark btn-block btn-lg"
+                        className="btn btn-success btn-block btn-lg mt-4"
                       >
                         Register
                       </button>

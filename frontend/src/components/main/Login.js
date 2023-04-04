@@ -56,25 +56,11 @@ const Login = () => {
       <div className="container-fluid h-custom">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
-            <img src="/logo.png" className="img-fluid" alt="Sample image" />
+            <img src="/logomain.png" className="img-fluid" alt="Sample image" />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <form onSubmit={loginForm.handleSubmit}>
-              <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-                <button type="button" className="btn  btn-floating mx-1">
-                  <i className="fab fa-facebook-f" />
-                </button>
-                <button type="button" className="btn  btn-floating mx-1">
-                  <i className="fab fa-twitter" />
-                </button>
-                <button type="button" className="btn  btn-floating mx-1">
-                  <i className="fab fa-linkedin-in" />
-                </button>
-              </div>
-              <div className="divider d-flex align-items-center my-4">
-                <p className="text-center fw-bold mx-3 mb-0">Or</p>
-              </div>
+             
               {/* Email input */}
               <label className="form-label" htmlFor="form3Example3">
                 Email address
@@ -120,14 +106,14 @@ const Login = () => {
               <div className="text-center text-lg-start mt-4 pt-2">
                 <button
                   type="submit"
-                  className="btn btn-danger  btn-lg"
+                  className="btn btn-success  btn-lg"
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                 >
                   Login
                 </button>
                 <p className="small fw-bold mt-2 pt-1 mb-0">
                   Don't have an account?{" "}
-                  <a href="#!" className="link-danger">
+                  <a href="#!" className="link-success">
                     Register
                   </a>
                 </p>
@@ -136,7 +122,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 dark bg-danger">
+      <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 dark bg-success">
         {/* Copyright */}
         <div className="text-white mb-3 mb-md-0">
           Copyright © 2020. All rights reserved.

@@ -10,7 +10,7 @@ const Contactus = () => {
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
               <div className="card" style={{ borderRadius: 15 }}>
                 <div className="card-body p-5">
-                  <h2 className="text-uppercase text-center mb-5 bold">
+                  <h2 className="text-uppercase text-center mb-5 bold ">
                     CONTACT US
                   </h2>
                   <form>
@@ -46,7 +46,7 @@ const Contactus = () => {
                     <div className="d-flex justify-content-center">
                       <button
                         type="button"
-                        className="btn btn-danger btn-block btn-lg mt-4"
+                        className="btn btn-success btn-block btn-lg mt-4"
                       >
                         Submit
                       </button>
