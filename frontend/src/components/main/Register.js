@@ -49,10 +49,12 @@ const Register = () => {
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
               <div className="card" style={{ borderRadius: 15 }}>
-                <div className="card-body p-5">
-                  <h2 className="text-uppercase text-center mb-5">
+                <div className="card-body p-5 ">
+                  <div className="createAcc">
+                  <h2 className="text-uppercase text-center mb-5 ">
                     Create an account
                   </h2>
+                  </div>
                   <form onSubmit={registerForm.handleSubmit}>
                     <label className="form-label" htmlFor="form3Example1cg">
                       Your Name

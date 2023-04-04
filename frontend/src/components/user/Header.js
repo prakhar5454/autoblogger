@@ -15,7 +15,7 @@ const Header = () => {
   const url = app_config.api_url;
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-succes"
+      className="navbar navbar-expand-lg navbar-dark bg-success"
       style={{
         backgroundColor: `#01b79f`,
       }}
@@ -35,40 +35,36 @@ const Header = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <NavLink className="navbar-brand mt-2 mt-lg-0" to="/">
-            <img src="/logo.png" height="45" alt=" Logo" loading="lazy" />
+            <img src="/logomain.png" height="45" alt=" Logo" loading="lazy" />
           </NavLink>
 
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/main/home">
+              <NavLink className="nav-link text-white me-1" to="/main/home">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/user/addvideo">
+              <NavLink className="nav-link text-white me-1" to="/user/addvideo">
                 Add Video
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/user/managevideo">
+              <NavLink className="nav-link text-white me-1" to="/user/managevideo">
                 Manage Video
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/listblog">
+              <NavLink className="nav-link text-white me-1" to="/blog/listblog">
                 List Blog
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/user/manageblog">
+              <NavLink className="nav-link text-white me-1" to="/user/manageblog">
                 Manage Blog
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/listblog">
-                List Blog
-              </NavLink>
-            </li>
+           
           </ul>
         </div>
 
@@ -85,7 +81,7 @@ const Header = () => {
               aria-expanded="false"
             >
               <img
-                src="/settings.png"
+                src="/setting.png"
                 className="rounded-circle"
                 height="25"
                 alt="Black and White Portrait of a Man"

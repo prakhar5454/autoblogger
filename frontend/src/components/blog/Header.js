@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-success">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       
       <div className="container-fluid">
         
@@ -24,7 +24,7 @@ const Header = () => {
           
           <a className="navbar-brand mt-2 mt-lg-0" href="#">
             <img
-              src="web-article.png"
+              src="/logomain.png"
               height="45"
               alt=" Logo"
               loading="lazy"
@@ -33,17 +33,17 @@ const Header = () => {
           
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/viewblog">View Blog</NavLink>
+              <NavLink className="nav-link  text-white me-1" to="/blog/viewblog">View Blog</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/blogmanager">Manage Blog</NavLink>
+              <NavLink className="nav-link  text-white me-1" to="/blog/blogmanager">Manage Blog</NavLink>
             </li>
             
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/listblog">List Blog</NavLink>
+              <NavLink className="nav-link  text-white me-1" to="/blog/listblog">List Blog</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog/addblog">Add Blog</NavLink>
+              <NavLink className="nav-link  text-white me-1" to="/blog/addblog">Add Blog</NavLink>
             </li>
            
 
@@ -56,20 +56,20 @@ const Header = () => {
         <div className="d-flex align-items-center">
           
           <a className="text-reset me-3" href="#">
-            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart  text-white me-1"></i>
           </a>
     
           
           <div className="dropdown">
             <a
-              className="text-reset me-3 dropdown-toggle hidden-arrow"
+              className="text-reset me-3 dropdown-toggle hidden-arrow "
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
               data-mdb-toggle="dropdown"
               aria-expanded="false"
             >
-              <i className="fas fa-bell"></i>
+              <i className="fas fa-bell  text-white me-1"></i>
               <span className="badge rounded-pill badge-notification bg-danger">1</span>
             </a>
             <ul
@@ -98,10 +98,10 @@ const Header = () => {
               aria-expanded="false"
             >
               <img
-                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                className="rounded-circle"
+                src="/setting.png"
+                className="rounded-circle  text-white me-1"
                 height="25"
-                alt="Black and White Portrait of a Man"
+                alt="logo"
                 loading="lazy"
               />
             </a>

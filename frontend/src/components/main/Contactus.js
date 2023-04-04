@@ -10,9 +10,10 @@ const Contactus = () => {
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
               <div className="card" style={{ borderRadius: 15 }}>
                 <div className="card-body p-5">
-                  <h2 className="text-uppercase text-center mb-5 bold ">
+                 <div className ="Cont">
+                 <h2 className="text-uppercase text-center mb-5 bold ">
                     CONTACT US
-                  </h2>
+                  </h2></div> 
                   <form>
                     <label className="form-label" htmlFor="form3Example1cg">
                       Your Name
