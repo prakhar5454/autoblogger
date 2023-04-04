@@ -21,13 +21,17 @@ const AddBlog = () => {
     JSON.parse(sessionStorage.getItem("user"))
   );
   const [selBlog, setSelBlog] = useState("");
+  const [blogData, setBlogData] = useState('');
   const navigate = useNavigate();
 
   const getDatafromBackend = async () => {
     setLoading(true);
     const response = await fetch(url + "/video/getbyid/" + id);
+    // console.log(response.status);
     if( response.status === 200){
     const data = await response.json();
+    console.log(data);
+    setBlogData(data.transcription)
     setVideoData(data);
     setfieldValues({
       title: data.title,
@@ -158,7 +162,7 @@ const BlogSubmit = async (formdata) => {
               <SimpleMdeReact
                 type="text"
                 id="text"
-                value={values.text}
+                value={blogData}
                 onChange={handleChange}
                 class="form-control "
                 required

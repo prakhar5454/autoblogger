@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import app_config from "../../config";
 
 function ListBlog() {
-  const url = app_config.api_url;
+  const url = app_config.backend_url;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const url = app_config.api_url;
+    const url = app_config.backend_url;
     fetch(url + "/blog/getall")
       .then((response) => {
         if (response.ok) {

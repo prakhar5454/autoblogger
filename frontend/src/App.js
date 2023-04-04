@@ -1,11 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Contactus from "./components/Contactus";
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Authorizer from "./components/auth/Auth";
 import User from "./components/user";
 import UserProfile from "./components/user/Profile";
@@ -18,6 +14,10 @@ import ListBlog from "./components/blog/ListBlog";
 import VideoManager from "./components/user/VideoManager";
 import AddVideo from "./components/user/AddVideo";
 import UserProvider from "./context/UserProvider";
+import Main from "./components/main";
+import Register from "./components/main/Register";
+import Contactus from "./components/main/Contactus";
+import Login from "./components/main/Login";
 
 function App() {
   return (
@@ -26,10 +26,12 @@ function App() {
         <UserProvider>
           {/* <Navbar /> */}
           <Routes>
-            <Route path="/" element={<Navigate to="/Login" />} />
-            <Route path="login" element={<Login />} />
-            <Route path="contact us" element={<Contactus />} />
-            <Route path="register" element={<Register />} />
+            <Route path="/" element={<Navigate to="/main/login" />} />
+            <Route path="main" element={<Main />} >
+              <Route path="login" element={<Login />} />
+              <Route path="contact us" element={<Contactus />} />
+              <Route path="register" element={<Register />} />
+            </Route>
 
             <Route
               element={
@@ -60,7 +62,7 @@ function App() {
                     <AddBlog />
                   </Authorizer>
                 }
-                path="addblog/:videoid"
+                path="addblog/:id"
               />
               <Route
                 element={
