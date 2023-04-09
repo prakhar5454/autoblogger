@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Addvideo from "./AddVideo";
 import app_config from "../../config";
+import { useNavigate } from "react-router-dom";
 
 const ManageVideo = () => {
   const url = app_config.api_url;
@@ -13,11 +14,14 @@ const ManageVideo = () => {
     JSON.parse(sessionStorage.getItem("user"))
   );
 
+  const navigate = useNavigate();
+
   const generateTranscript = (id) => {
     fetch(url + "/util/transcribe/" + id)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        navigate('/blog/addblog/'+id);
       });
   };
 
