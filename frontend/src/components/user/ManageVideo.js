@@ -4,8 +4,7 @@ import Addvideo from "./AddVideo";
 import app_config from "../../config";
 
 const ManageVideo = () => {
-  const url = app_config.api_url;
-  const response = "http://localhost:5000";
+  const url = app_config.backend_url;
   const [userArray, setUserArray] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [updateFormData, setUpdateFormData] = useState(null);
@@ -118,6 +117,7 @@ const ManageVideo = () => {
       <h1>Video Manager Dashboard</h1>
       {/* table */}
       <Addvideo />
+      nice
       <div className="row">
         <div className="col-md">{displayUsers()}</div>
       </div>

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import AddVideo from "./AddVideo";
 
 const VideoManager = () => {
-  const url = app_config.api_url;
+  const url = app_config.backend_url;
   const [userArray, setUserArray] = useState([]);
   const [loading, setLoading] = useState(false);
   const [blogLoading, setBlogLoading] = useState(false);
