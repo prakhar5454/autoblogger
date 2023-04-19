@@ -69,6 +69,7 @@ const BlogSubmit = async (formdata) => {
   formdata.video = id;
   formdata.user = currentUser._id;
   formdata.image=selBlog;
+  formdata.data = blogData
   const response = await fetch(url + "/blog/add", {
     method: "POST",
     body: JSON.stringify(formdata),

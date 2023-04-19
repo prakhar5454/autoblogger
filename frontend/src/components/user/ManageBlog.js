@@ -8,7 +8,7 @@ import "./VideoManager.css";
 import { motion } from "framer-motion";
 
 const ManageBlog = () => {
-  const url = app_config.api_url;
+  const url = app_config.backend_url;
   const [blogArray, setBlogArray] = useState([]);
   const [loading, setLoading] = useState(false);
   const [blogLoading, setBlogLoading] = useState(false);

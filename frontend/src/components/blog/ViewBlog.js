@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import app_config from '../../config';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 
 const ViewBlog = () => {
   const { id } = useParams();
@@ -40,6 +41,7 @@ const ViewBlog = () => {
           <div className="card-body">
           <p>{blogData.text}</p>
           <p>{blogData.category}</p>
+          <MarkdownPreview source={blogData.data} />
           </div>
         </div>
       </div>
