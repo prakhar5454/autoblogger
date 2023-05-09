@@ -6,7 +6,26 @@
 }
 
 .list-blog{
-  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80");
+  background-image: url("https://assets-global.website-files.com/5eff9c5e4dba181f8aa2d1e0/644fdb0444461008ee1907ee_Workflow%20Automation%20Statistics%20You%20Need%20to%20Know%20Header.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.header-top{
+  padding: 100px 0;
+  background-image:linear-gradient(to left, #20a15a3e, #20a159), url('');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
+}
+
+.header-text{
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: bold;
+}
+.vid-manage-bg{
+  background-size:contain;
 }

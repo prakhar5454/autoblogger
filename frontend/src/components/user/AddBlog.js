@@ -77,10 +77,10 @@ const AddBlog = () => {
       
       <section
         className=" bg-image"
-        // style={{
-        //   backgroundImage:
-        //     'url("https://wallpaperaccess.com/full/4893706.jpg")',
-        // }}
+         style={{
+           backgroundImage:
+             'url("//pattern.jpg")',
+         }}
       >
         <section className="header-top addblog-header-bg">
       <h1 className="header-text">Create New Blog</h1>

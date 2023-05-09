@@ -30,8 +30,8 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-          <NavLink className="nav-link text-white me-1" to="/main/register">
-              Sign UP
+          <NavLink className="nav-link text-white me-1 " to="/main/register">
+              Sign up
             </NavLink>
           </li>
           <li className="nav-item">

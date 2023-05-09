@@ -34,7 +34,7 @@ function ListBlog() {
   return (
     <section className="list-blog">
       <div className="container py-5">
-        <h2 className="mt-4 mb-5">
+        <h2 className=" text-white mt-4 mb-5">
           <strong>BLOGS</strong>
         </h2>
         <div className="row">

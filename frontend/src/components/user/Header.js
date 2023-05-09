@@ -13,11 +13,13 @@ const Header = () => {
     JSON.parse(sessionStorage.getItem("user"))
   );
   const url = app_config.api_url;
+
+  const {theme_color} = app_config;
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark bg-success"
+      className="navbar navbar-expand-lg navbar-dark"
       style={{
-        backgroundColor: `#01b79f`,
+        backgroundColor: theme_color,
       }}
     >
       <div className="container-fluid">

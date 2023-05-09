@@ -18,12 +18,15 @@ import Main from "./components/main";
 import Register from "./components/main/Register";
 import Contactus from "./components/main/Contactus";
 import Login from "./components/main/Login";
+import { Toaster } from "react-hot-toast";
+
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <UserProvider>
+          <Toaster position="top-right" />
           {/* <Navbar /> */}
           <Routes>
             <Route path="/" element={<Navigate to="/main/login" />} />
@@ -87,6 +90,7 @@ function App() {
                 element={<BlogManager></BlogManager>}
                 path="blogmanager"
               ></Route>
+              
             </Route>
           </Routes>
         </UserProvider>

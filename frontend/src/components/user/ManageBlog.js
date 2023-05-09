@@ -101,10 +101,11 @@ const ManageBlog = () => {
       exit={{ opacity: 0.5, x: -300 }}
       transition={{ type: "keyframes" }}
       className="vid-manage-bg"
+      style={{ backgroundImage: `url('https://assets-global.website-files.com/5eff9c5e4dba181f8aa2d1e0/644fdb0444461008ee1907ee_Workflow%20Automation%20Statistics%20You%20Need%20to%20Know%20Header.jpg')`, minHeight: '100vh' }}
     >
       <section className="header-top">
         {/* <i class="fas fa-paperclip header-text"></i> */}
-      <h1 className="header-text">Manage Your Blogs</h1>
+      <h1 className="header-text ">Manage Your Blogs</h1>
       </section>
       <section>
         
