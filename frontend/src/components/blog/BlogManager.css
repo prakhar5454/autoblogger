@@ -24,14 +24,15 @@
     transform: scale(1.5);   
 }
 .blogheader{
-    /* background-image:url("../main/photo/pexels-pixabay-262508.jpg"); */
+    background-image: url('https://www.brafton.com/wp-content/uploads/2018/08/social-media-blogs.jpeg');
     height:60vh;
     background-size:cover;
     background-position:center; 
     background-repeat:no-repeat;
-    background-blend-mode: darken;
+    background-blend-mode:normal;
     background-color: rgba(0,0,0,0.5);
     font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 .bg-image-blog{
