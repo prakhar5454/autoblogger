@@ -148,7 +148,8 @@ const VideoManager = () => {
       exit={{ opacity: 0.5, x: -300 }}
       transition={{ type: "keyframes" }}
       className="vid-manage-bg"
-      style={{ backgroundImage: `url('https://assets-global.website-files.com/5eff9c5e4dba181f8aa2d1e0/644fdb0444461008ee1907ee_Workflow%20Automation%20Statistics%20You%20Need%20to%20Know%20Header.jpg')`, minHeight: '100vh' }}
+      style={{ backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')`, minHeight: '100vh ' 
+     }}
     >
       <section className="header-top">
         <div className="container">

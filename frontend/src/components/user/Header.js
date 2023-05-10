@@ -62,7 +62,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white me-1" to="/blog/manageblog">
+              <NavLink className="nav-link text-white me-1" to="/blog/BlogManager">
                 Manage Blog
               </NavLink>
             </li>
