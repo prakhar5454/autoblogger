@@ -35,8 +35,8 @@ const Home = () => {
                                         <div className="col-lg-10">
                                             <div className="text-white pb-5">
                                                 <h1 className="my-md-5 mb-4 px-5 display-3 fw-bold ls-tight">
-                                                    <span>Custom Browser Extension</span> <br />
-                                                    <span className="">for your needs</span>
+                                                    <span>The One-Click Blog Generator</span> <br />
+                                                    <span className=""></span>
                                                 </h1>
                                                 <NavLink
                                                     className="btn btn-outline-light btn-lg btn-rounded py-3 px-5 mb-2 mb-md-0 me-md-2"
