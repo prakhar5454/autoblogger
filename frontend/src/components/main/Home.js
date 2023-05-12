@@ -18,7 +18,7 @@ const Home = () => {
                             className="px-4 py-5 px-md-5 text-center bg-image"
                             style={{
                                 backgroundImage:
-                                    'url("")',
+                                    'url("https://www.score.org/sites/default/files/styles/responsive_16_9_1000w/public/AdobeStock_339685570_blogging%20C.jpeg")',
                                 height: 500,
                                 backgroundSize: "cover",
                                 backgroundPosition: "50% 50%",
@@ -92,34 +92,29 @@ const Home = () => {
                         <div className="row gx-lg-5 mb-5 align-items-center">
                             <div className="col-md-6 mb-4 mb-md-0">
                                 <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/028.jpg"
+                                    src="/Article1.png"
                                     className="w-100 shadow-4-strong rounded-4 mb-4"
                                     alt=""
                                     aria-controls="#picker-editor"
                                 />
                             </div>
                             <div className="col-md-6 mb-4 mb-md-0">
-                                <h3 className="fw-bold">Art</h3>
+                                <h3 className="fw-bold">Successful Peoples</h3>
                                 <div className="mb-2 text-danger small">
                                     <i
                                         className="fas fa-money-bill me-2"
                                         aria-controls="#picker-editor"
                                     />
-                                    <span>Business</span>
+                                    <span>Motivation</span>
                                 </div>
                                 <p className="text-muted">
-                                    Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
-                                    vulputate. Ut vulputate est non quam dignissim elementum. Donec a
-                                    ullamcorper diam.
+                                Do you often wonder what sets certain people up for success while others do not and what you may do to improve your odds? Do you often Google in inspiring sayings, watch videos of browsing commencement addresses on Youtube and devour the works of renowned life coaches. The key to success is a relentless focus on better oneself. The process of achieving success is artistic rather than scientific
                                 </p>
                                 <p className="text-muted">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quae
-                                    nulla saepe rerum aspernatur odio amet perferendis tempora
-                                    mollitia? Ratione unde magni omnis quaerat blanditiis cumque
-                                    dolore placeat rem dignissimos?
+                                To that end, I'd like to describe ten traits shared by very successful individuals, which you should adopt immediately to become your best self. Number one, successful people greet people by their namesw
                                 </p>
                                 <a
-                                    className="btn btn-primary"
+                                    className="btn btn-success"
                                     href="#"
                                     role="button"
                                     aria-controls="#picker-editor"
@@ -131,36 +126,26 @@ const Home = () => {
                         <div className="row gx-lg-5 mb-5 flex-lg-row-reverse align-items-center">
                             <div className="col-md-6 mb-4 mb-md-0">
                                 <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/033.jpg"
+                                    src="/Article2.png"
                                     className="w-100 shadow-4-strong rounded-4 mb-4"
                                     alt=""
                                     aria-controls="#picker-editor"
                                 />
                             </div>
                             <div className="col-md-6 mb-4 mb-md-0">
-                                <h3 className="fw-bold">Exhibition in Paris</h3>
-                                <div className="mb-2 text-primary small">
+                                <h3 className="fw-bold">Mukesh Ambani</h3>
+                                <div className="mb-2 text-success small">
                                     <i
                                         className="fas fa-money-bill me-2"
                                         aria-controls="#picker-editor"
                                     />
-                                    <span>Art</span>
+                                    <span>Empowering the Future</span>
                                 </div>
                                 <p className="text-muted">
-                                    Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta
-                                    dui, sit amet rutrum enim massa in ante. Curabitur in justo at
-                                    lorem laoreet ultricies. Nunc ligula felis, sagittis eget nisi
-                                    vitae, sodales vestibulum purus. Vestibulum nibh ipsum, rhoncus
-                                    vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
-                                    tortor finibus, a eleifend lectus dictum. Cras tempor convallis
-                                    magna id rhoncus. Suspendisse potenti. Nam mattis faucibus
-                                    imperdiet. Proin tempor lorem at neque tempus aliquet. Phasellus
-                                    at ex volutpat, varius arcu id, aliquam lectus. Vestibulum mattis
-                                    felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
-                                    iaculis est vehicula ut.
+                                Nobody has ever achieved anything big in business or in any walk of life, without courage. Of course, whenever you do anything big, you do feel a little scared. But you've got to conquer to discover the hidden hero within you. My dear reliance family. Once again, a very warm good evening through each and every one of you. Over the last, I have been very fortunate to lead reliance. Everything I am today is because of reliance. Everything I know today is thanks to reliance. This evening, I want to share with you the most important lessons I have learned from my father during this phenomenal journey. The first lesson is courage. And I have seen it in a whole lot of you. Nobody has ever achieved anything big
                                 </p>
                                 <a
-                                    className="btn btn-primary"
+                                    className="btn btn-success"
                                     href="#"
                                     role="button"
                                     aria-controls="#picker-editor"
@@ -172,39 +157,26 @@ const Home = () => {
                         <div className="row gx-lg-5 mb-5 align-items-center">
                             <div className="col-md-6 mb-4 mb-md-0">
                                 <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/079.jpg"
+                                    src="/Article3.jpg"
                                     className="w-100 shadow-4-strong rounded-4 mb-4"
                                     alt=""
                                     aria-controls="#picker-editor"
                                 />
                             </div>
                             <div className="col-md-6 mb-4 mb-md-0">
-                                <h3 className="fw-bold">Stock market boom</h3>
+                                <h3 className="fw-bold">Dhoni</h3>
                                 <div className="mb-2 text-warning small">
                                     <i
                                         className="fas fa-money-bill me-2"
                                         aria-controls="#picker-editor"
                                     />
-                                    <span>Business</span>
+                                    <span>Sports</span>
                                 </div>
                                 <p className="text-muted">
-                                    Sed sollicitudin purus sed nulla dignissim ullamcorper. Aenean
-                                    tincidunt vulputate libero, nec imperdiet sapien pulvinar id.
-                                    Nullam scelerisque odio vel lacus faucibus, tincidunt feugiat
-                                    augue ornare. Proin ac dui vel lectus eleifend vestibulum et
-                                    lobortis risus. Nullam in commodo sapien. Curabitur ut erat congue
-                                    sem finibus eleifend egestas eu metus. Sed ut dolor id magna
-                                    rutrum ultrices ut eget libero. Duis vel porttitor odio. Ut
-                                    pulvinar sed turpis ornare tincidunt. Donec luctus, mi euismod
-                                    dignissim malesuada, lacus lorem commodo leo, tristique blandit
-                                    ante mi id metus. Integer et vehicula leo, vitae interdum lectus.
-                                    Praesent nulla purus, commodo at euismod nec, blandit ultrices
-                                    erat. Aliquam eros ipsum, interdum et mattis vitae, faucibus vitae
-                                    justo. Nulla condimentum hendrerit leo, in feugiat ipsum
-                                    condimentum ac. Maecenas sed blandit dolor.
+                                Their people all around their cars parked all around. Their people on the street, You look ahead, the thousands of people, you look behind this, thousands of people. And everybody had a smile on their face. None of them were sitting in the car. All of them are outside Here's the thing. I'm sure you've noticed this. Every time you come from an event, there's a standing ovation like this. It's... You are referred to very often as a as a legend. How does that feel? That's a price for feeling in itself, isn't it? It feels very old to start off because to be called. First of, I don't believe I'm. But to be called legend, which means you have spent a lot of time on the field. On the field but depending on whichever stream you come from you are from Bo wood whether you're are from cricket or any other sport or business banking, any sector. There's a survey where the results revealed that you are the second most admired man in India? That is a big deal. Second second to whom, Second to our prime minister? Well, I think I can stand in election
                                 </p>
                                 <a
-                                    className="btn btn-primary"
+                                    className="btn btn-success"
                                     href="#"
                                     role="button"
                                     aria-controls="#picker-editor"
@@ -226,18 +198,16 @@ const Home = () => {
                             <div className="text-center" style={{ maxWidth: 700 }}>
                                 <h2 className="fw-bold mb-4 text-center">
                                     <span className="me-2">Why is it so</span>
-                                    <u className="text-primary">great?</u>
+                                    <u className="text-success">great?</u>
                                 </h2>
                                 <p className="text-muted mb-5">
-                                    Minus fuga aliquid vero facere ducimus quos, quisquam nemo?
-                                    Molestias ullam provident vitae error aliquam dolorum temporibus?
-                                    Doloremque, quasi
+                                    Can turn your video into blog in a single click
                                 </p>
                             </div>
                         </div>
                         <div className="row gx-lg-5">
                             <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                                <div className="p-3 bg-primary rounded-circle shadow-2-strong d-inline-block mb-4">
+                                <div className="p-3 bg-success rounded-circle shadow-2-strong d-inline-block mb-4">
                                     <i
                                         className="fas fa-headset fa-lg text-white fa-fw"
                                         aria-controls="#picker-editor"
@@ -245,12 +215,11 @@ const Home = () => {
                                 </div>
                                 <h5 className="fw-bold mb-3">Support 24/7</h5>
                                 <p className="text-muted mb-0">
-                                    Laudantium totam quas cumque pariatur at doloremque hic quos quia
-                                    eius. Reiciendis optio minus mollitia rerum labore
+                                    
                                 </p>
                             </div>
                             <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                                <div className="p-3 bg-primary rounded-circle shadow-2-strong d-inline-block mb-4">
+                                <div className="p-3 bg-success rounded-circle shadow-2-strong d-inline-block mb-4">
                                     <i
                                         className="fas fa-shield-alt fa-lg text-white fa-fw"
                                         aria-controls="#picker-editor"
@@ -258,12 +227,11 @@ const Home = () => {
                                 </div>
                                 <h5 className="fw-bold mb-3">Safe and solid</h5>
                                 <p className="text-muted mb-0">
-                                    Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
-                                    aspernatur odio soluta, quisquam dolore animi
+                                   
                                 </p>
                             </div>
                             <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
-                                <div className="p-3 bg-primary rounded-circle shadow-2-strong d-inline-block mb-4">
+                                <div className="p-3 bg-success rounded-circle shadow-2-strong d-inline-block mb-4">
                                     <i
                                         className="fas fa-shipping-fast fa-lg text-white fa-fw"
                                         aria-controls="#picker-editor"
@@ -271,12 +239,11 @@ const Home = () => {
                                 </div>
                                 <h5 className="fw-bold mb-3">Extremely fast</h5>
                                 <p className="text-muted mb-0">
-                                    Enim cupiditate, minus nulla dolor cumque iure eveniet facere
-                                    ullam beatae hic voluptatibus dolores exercitationem
+                                    
                                 </p>
                             </div>
-                            <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
-                                <div className="p-3 bg-primary rounded-circle shadow-2-strong d-inline-block mb-4">
+                            <div className=" row-lg-2 col-lg-3 col-md-6 mb-5 mb-md-0">
+                                <div className="p-3 bg-success rounded-circle shadow-2-strong d-inline-block mb-4">
                                     <i
                                         className="fas fa-chart-pie fa-lg text-white fa-fw"
                                         aria-controls="#picker-editor"
@@ -284,8 +251,7 @@ const Home = () => {
                                 </div>
                                 <h5 className="fw-bold mb-3">Live analytics</h5>
                                 <p className="text-muted mb-0">
-                                    Illum doloremque ea, blanditiis sed dolor laborum praesentium
-                                    maxime sint, consectetur atque ipsum ab adipisci
+                                   
                                 </p>
                             </div>
                         </div>
@@ -316,7 +282,7 @@ const Home = () => {
                                     />
                                 </div>
                                 <h5 className="mb-3">Maria Smantha</h5>
-                                <h6 className="text-primary mb-3">Web Developer</h6>
+                                <h6 className="text-success mb-3">Web Developer</h6>
                                 <p className="px-xl-3">
                                     <i className="fas fa-quote-left pe-2" />
                                     <span>
@@ -355,7 +321,7 @@ const Home = () => {
                                     />
                                 </div>
                                 <h5 className="mb-3">Lisa Cudrow</h5>
-                                <h6 className="text-primary mb-3">Graphic Designer</h6>
+                                <h6 className="text-success mb-3">Graphic Designer</h6>
                                 <p className="px-xl-3">
                                     <i className="fas fa-quote-left pe-2" />
                                     <span>
@@ -393,7 +359,7 @@ const Home = () => {
                                     />
                                 </div>
                                 <h5 className="mb-3">John Smith</h5>
-                                <h6 className="text-primary mb-3">Marketing Specialist</h6>
+                                <h6 className="text-success mb-3">Marketing Specialist</h6>
                                 <p className="px-xl-3">
                                     <i className="fas fa-quote-left pe-2" />
                                     <span>
@@ -436,7 +402,7 @@ const Home = () => {
                     <section className="mb-10 text-center">
                         <div className="row d-flex justify-content-center">
                             <div className="col-lg-6">
-                                <div className="p-3 bg-primary rounded-circle shadow-2-strong d-inline-block mb-4">
+                                <div className="p-3 bg-success rounded-circle shadow-2-strong d-inline-block mb-4">
                                     <i
                                         className="fas fa-envelope fa-lg text-white fa-fw"
                                         aria-controls="#picker-editor"
@@ -469,7 +435,7 @@ const Home = () => {
                                     {/* Submit button */}
                                     <button
                                         type="submit"
-                                        className="btn btn-primary btn-lg ms-md-2"
+                                        className="btn btn-success btn-lg ms-md-2"
                                         aria-controls="#picker-editor"
                                     >
                                         Subscribe
