@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { Formik } from "formik";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 // import Loading from "../main/Loading";
@@ -18,6 +18,8 @@ const AddVideo = () => {
     title: "",
     description: "",
   };
+
+  const videoUrlRef = useRef(null);
 
   const uploadFile = (e) => {
     const file = e.target.files[0];
@@ -81,6 +83,43 @@ const AddVideo = () => {
       });
     }
     setLoading(false);
+  };
+
+  const downloadYoutubeVideo = () => {
+    return (
+      <div className="card">
+        <div className="card-body">
+          <h3>Enter Youtube URL to Add Video</h3>
+          <input className="form-control" ref={videoUrlRef} />
+          <button
+            className="btn btn-primary mt-3"
+            onClick={async (e) => {
+              console.log(videoUrlRef.current.value);
+              const res = fetch("http://localhost:5000/video/savefromyoutube", {
+                method: "POST",
+                body: JSON.stringify({
+                  url: videoUrlRef.current.value,
+                  user: currentUser._id,
+                }),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+
+              if (res.status === 200) {
+                Swal.fire({
+                  title: "Success",
+                  text: "Video added successfully😁👍",
+                  icon: "success",
+                });
+              }
+            }}
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -163,6 +202,10 @@ const AddVideo = () => {
             </form>
           )}
         </Formik>
+
+        {
+          downloadYoutubeVideo()
+        }
       </div>
     </motion.div>
   );
