@@ -19,6 +19,7 @@ import Register from "./components/main/Register";
 import Contactus from "./components/main/Contactus";
 import Login from "./components/main/Login";
 import { Toaster } from "react-hot-toast";
+import Home from "./components/main/Home";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/main/login" />} />
             <Route path="main" element={<Main />} >
+              <Route path="home" element={<Home />} />
               <Route path="login" element={<Login />} />
               <Route path="contact us" element={<Contactus />} />
               <Route path="register" element={<Register />} />
