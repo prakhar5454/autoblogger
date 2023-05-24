@@ -90,7 +90,7 @@ const VideoManager = () => {
   const displayVideo = () => {
     if (!loading) {
       return userArray.map(({ _id, title, description, file, thumbnail }, index) => (
-        <div className="col-md-3 mt-4" key={_id}>
+        <div className="col-md-4 mt-4" key={_id}>
           <div
             className="thumb-small"
             style={{ backgroundImage: `url('${thumbnail ? url + "/" + thumbnail : '/video-placeholder.webp'}')` }}
@@ -98,14 +98,10 @@ const VideoManager = () => {
             <div className="p-3 thumb-options">
               {/* <h5 className="card-title">{title}</h5>
               <p className="text-muted">{description}</p> */}
-              <Link to={"/user/viewvideo/" + _id}>
-                <button className="btn btn-primary btn-floating">
-                  <i class="fas fa-eye "></i>
-                </button>
-              </Link>
+              
               &nbsp;&nbsp;&nbsp;
               <button
-                className="btn btn-danger btn-floating"
+                className="btn btn-success btn-floating"
                 onClick={(e) => deleteVideo(_id)}
               >
                 <i class="fas fa-trash"></i>
@@ -113,7 +109,7 @@ const VideoManager = () => {
               &nbsp;&nbsp;&nbsp;
               {!blogLoading ? (
                 <button
-                  className={"btn btn-secondary " + (selBlog === index ? 'btn-rounded' : 'btn-floating')}
+                  className={"btn btn-secondary btn-success " + (selBlog === index ? 'btn-rounded' : 'btn-floating')}
                   onClick={(e) => convertVideotoBlog(_id, index)}
                 ><i className={"fa-solid fa-gear " + (selBlog === index ? 'fa-spin' : '')}></i>
                   {selBlog === index ? ' Converting ...' : ''}
@@ -148,7 +144,7 @@ const VideoManager = () => {
       exit={{ opacity: 0.5, x: -300 }}
       transition={{ type: "keyframes" }}
       className="vid-manage-bg"
-      style={{ backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')`, minHeight: '100vh ' 
+      style={{ backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')`, minHeight: '300vh' 
      }}
     >
       <section className="header-top">

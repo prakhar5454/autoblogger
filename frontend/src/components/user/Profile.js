@@ -1,149 +1,195 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import app_config from "../../config";
+import Swal from "sweetalert2";
+import { useFormik } from "formik";
 
 const UserProfile = () => {
-  const [selImage, setSelImage] = useState("");
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
-  const url = app_config.apiurl;
 
-  const [novelList, setNovelList] = useState([]);
+  const url = app_config.apiUrl;
+  const [passwordHidden, setPasswordHidden] = useState(true);
 
-  // getting saved user data from backend
-  const getData = async () => {
-    const response = await fetch("http://localhost:5000/novel/getall");
-    if (response.status === 200) {
-      const data = await response.json();
-      console.log(data);
-      setNovelList(data);
-    } else {
-      console.log("something went wrong");
-    }
-  };
-
-  // calling the above function
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const updateProfile = async (dataToUpdate) => {
-    const res = await fetch(url + "/user/update/" + currentUser._id, {
+  const updateProfile = async (data) => {
+    console.log(data);
+    const res = await fetch(url + "/user/update/"+currentUser._id, {
       method: "PUT",
-      body: JSON.stringify(dataToUpdate),
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
     });
     console.log(res.status);
-    const data = await res.json();
-    console.log(data);
-    sessionStorage.setItem('user', JSON.stringify(data));
-    setCurrentUser(data);
+    const userdata = (await res.json()).result;
+    console.log(userdata);
+    setCurrentUser(userdata);
+    sessionStorage.setItem('user', JSON.stringify(userdata));
+  }
 
-  };
-
-  const uploadFile = (e) => {
+  const uploadProfileImage = (e) => {
     const file = e.target.files[0];
-    setSelImage(file.name);
+    // setSelImage(file.name);
     const fd = new FormData();
     fd.append("myfile", file);
     fetch(url + "/util/uploadfile", {
       method: "POST",
       body: fd,
-    }).then(async (res) => {
+    }).then((res) => {
       if (res.status === 200) {
         console.log("file uploaded");
-        await updateProfile({ avatar: file.name });
+        updateProfile({avatar : file.name})
       }
     });
   };
 
+
+  const deleteAccount = async () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    })
+    return;
+    const res = await fetch(url + "/user/delete/" + currentUser._id, {
+      method: "DELETE",
+    });
+    if (res.status === 200) {
+      sessionStorage.removeItem("user");
+      window.location.href = "/";
+    }
+  };
+
+  const profileForm = useFormik({
+    initialValues: currentUser,
+    onSubmit: updateProfile
+  })
+
+
   return (
-    <section className="h-100 gradient-custom-2">
-      <div className="container py-5 h-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
-          <div className="card ">
-            <div className="rounded-top text-white d-flex flex-row user-profile-top">
-              <div
-                className="ms-4 mt-5 d-flex flex-column"
-                style={{ width: 150 }}
-              >
-                <img
-                  src={currentUser.avatar?url+'/'+currentUser.avatar :"avatar.png"}
-                  alt="User Avatar"
-                  className="img-fluid img-thumbnail mt-4 mb-2"
-                  style={{ width: 150, zIndex: 1 }}
-                />
-                <label
-                  htmlFor="image"
-                  style={{
-                    zIndex: 1,
-                    display: "block",
-                    textAlign: "center",
-                    padding: 5,
-                    backgroundColor: "white",
-                    border: "2px solid black",
-                    borderRadius: 3,
-                    color: "black",
-                  }}
-                >
-                  Edit profile
-                </label>
-                <input type="file" hidden id="image" onChange={uploadFile} />
+    <div>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-4 mb-4">
+            <div className="card mb-4">
+              <div className="card-header py-3">
+                <h5 className="mb-0">Summary</h5>
               </div>
-              <div className="ms-3" style={{ marginTop: 130 }}>
-                <h5>{currentUser.username}</h5>
-                <p>{currentUser.email}</p>
-              </div>
-            </div>
-            <div
-              className="p-4 text-black"
-              style={{ backgroundColor: "#f8f9fa" }}
-            >
-              <div className="d-flex justify-content-end text-center py-1">
-                <div>
-                  <p className="mb-1 h5">ID : {currentUser._id}</p>
-                </div>
-              </div>
-            </div>
-            <div className="card-body p-4 text-black">
-              <div className="d-flex justify-content-between align-items-center mb-4">
-                <p className="lead fw-normal mb-0">Uploaded Novels</p>
-                <p className="mb-0">
-                  <a href="#!" className="text-muted">
-                    Show all
-                  </a>
+              <div className="card-body">
+
+                <img height={200} className="border-rounded d-block m-auto" src={currentUser.avatar?`${url}/${currentUser.avatar}` : '/avatar.webp'} alt="" />
+                <label className="btn btn-outline-secondary w-100 mt-3" htmlFor="upload-image">  <i class="fas fa-pen"></i> Edit </label>
+                <input type="file" hidden onChange={uploadProfileImage} id="upload-image" />
+                <p className="text-center">Welcome
+                  Back</p>
+                <p className="text-center">
+                  <span className="h4">{currentUser.name}</span>
                 </p>
-              </div>
-              <div className="row g-2">
-                {novelList.map((novel) => (
-                  <div
-                    className="col-md-3 mb-2"
-                    style={{ height: "fit-content" }}
-                  >
-                    <div
-                      class="w-100 bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-                      data-mdb-ripple-color="light"
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                    Email
+                    <span className="fw-bold">{currentUser.email}</span>
+                  </li>
+                  <li className="list-group-item d-flex justify-content-between align-items-center px-0">
+                    Password
+                    {passwordHidden ? (
+                      <span className="fw-bold">********</span>
+                    ) : (
+                      <span className="fw-bold">{currentUser.password}</span>
+                    )}
+                    <button
+                      className="btn btn-outline-secondary"
+                      onClick={() => setPasswordHidden(!passwordHidden)}
                     >
-                      <Link to={"/main/view/" + novel._id}>
-                        <img
-                          src={url + "/" + novel.image}
-                          alt=""
-                          className="w-100 rounded-3"
+                      {passwordHidden ? "Show" : "Hide"}
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  className="btn btn-danger btn-block"
+                  onClick={deleteAccount}
+                >
+                  Delete Account
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-8 mb-4">
+            <div className="card mb-4">
+              <div className="card-header py-3">
+                <h5 className="mb-0"> <i class="fas fa-pen-alt    "></i> Edit Profile</h5>
+              </div>
+              <div className="card-body">
+              <form onSubmit={profileForm.handleSubmit}>
+                  {/* 2 column grid layout with text inputs for the first and last names */}
+                  <div className=" mb-4">
+                    <div className="col">
+                      <div className="">
+                      <label className="form-label" htmlFor="form7Example1">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          value={profileForm.values.name}
+                          onChange={profileForm.handleChange}
+                          className="form-control"
                         />
-                      </Link>
+                        
+                      </div>
                     </div>
+                    
                   </div>
-                ))}
+                  <div className="mb-4">
+                      <div className="">
+                      <label className="form-label" htmlFor="form7Example2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          value={profileForm.values.email}
+                          onChange={profileForm.handleChange}
+                          className="form-control"
+                        />
+                        
+                      </div>
+                    </div>
+                  {/* Text input */}
+                  <div className=" mb-4">
+                  <label className="form-label" htmlFor="form7Example3">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      value={profileForm.values.password}
+                      onChange={profileForm.handleChange}
+                      className="form-control"
+                    />
+                   
+                  </div>
+                  
+                  
+                 
+                  
+                  <button className="btn btn-primary"> <i class="fa-solid fa-arrows-rotate"></i> Update Profile</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

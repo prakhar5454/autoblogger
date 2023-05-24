@@ -56,7 +56,7 @@ function ListBlog() {
                   {/* <p>Category</p> */}
                   <NavLink
                     to={"/blog/viewblog/" + blog._id}
-                    className="btn btn-primary w-100"
+                    className="btn btn-success w-100"
                   >
                     {" "}
                     <i class="fas fa-eye"></i> View{" "}

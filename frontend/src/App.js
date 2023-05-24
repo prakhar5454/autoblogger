@@ -30,7 +30,7 @@ function App() {
           <Toaster position="top-right" />
           {/* <Navbar /> */}
           <Routes>
-            <Route path="/" element={<Navigate to="/main/login" />} />
+            <Route path="/" element={<Navigate to="/main/home" />} />
             <Route path="main" element={<Main />} >
               <Route path="home" element={<Home />} />
               <Route path="login" element={<Login />} />

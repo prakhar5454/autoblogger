@@ -18,6 +18,7 @@ const Navbar = () => {
         <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse" id="navbarColor02">
+     
       <NavLink className="navbar-brand mt-2 mt-lg-0" to="/">
             <img src="/logomain.png" height="45" alt=" Logo" loading="lazy" />
           </NavLink>

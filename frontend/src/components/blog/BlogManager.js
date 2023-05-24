@@ -80,7 +80,7 @@ const BlogManager = () => {
               <br/>
               </div>
               <div className="d-flex justify-content-between">
-              <button className="btn btn-primary" onClick={e=>navigate('/blog/viewblog/'+_id)} >View</button>
+              <button className="btn btn-success" onClick={e=>navigate('/blog/viewblog/'+_id)} >View</button>
               <button className="btn btn-danger float-end" onClick={e=>{deleteBlog(_id)}}>
                 Delete
               </button>
@@ -103,7 +103,7 @@ const BlogManager = () => {
       <section>
       <div className="d-flex justify-content-center align-items-center  blogheader ">
         <h1 className="text-light">
-          Your All Blogs
+          
       </h1>
         </div>
         <div>

@@ -19,7 +19,7 @@ const Home = () => {
                             style={{
                                 backgroundImage:
                                     'url("https://www.score.org/sites/default/files/styles/responsive_16_9_1000w/public/AdobeStock_339685570_blogging%20C.jpeg")',
-                                height: 500,
+                                height: 600,
                                 backgroundSize: "cover",
                                 backgroundPosition: "50% 50%",
                                 backgroundColor: "rgba(0, 0, 0, 0)"
@@ -34,7 +34,7 @@ const Home = () => {
                                     <div className="row d-flex justify-content-center align-items-center h-100">
                                         <div className="col-lg-10">
                                             <div className="text-white pb-5">
-                                                <h1 className="my-md-5 mb-4 px-5 display-3 fw-bold ls-tight">
+                                                <h1 className="my-md-5 mb-4 px-5 display-3 fw-bold ls-tight ">
                                                     <span>The One-Click Blog Generator</span> <br />
                                                     <span className=""></span>
                                                 </h1>
@@ -86,9 +86,9 @@ const Home = () => {
             <div data-draggable="true" className="" style={{ position: "relative" }}>
                 {/**/}
                 {/**/}
-                <section draggable="false" className="container pt-5" data-v-271253ee="" id="learn-more">
+                <section draggable="false" className="container pt-10" data-v-271253ee="" id="learn-more">
                     <section className="mb-10">
-                        <h2 className="fw-bold mb-5 text-center">Latest articles</h2>
+                        <h1 className="fw-bold mb-5 text-center">Latest articles</h1>
                         <div className="row gx-lg-5 mb-5 align-items-center">
                             <div className="col-md-6 mb-4 mb-md-0">
                                 <img
