@@ -6,10 +6,12 @@ import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 // import Loading from "../main/Loading";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const AddVideo = () => {
   const [selFile, setSelFile] = useState("");
   const [selImage, setSelImage] = useState("");
+  const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
@@ -54,6 +56,12 @@ const AddVideo = () => {
   };
 
   const userSubmit = async (formdata) => {
+    if (!selFile) {
+      Swal.fire({
+        icon: 'error', title: 'Error', text: 'Upload a Video First'
+      })
+      return;
+    }
     setLoading(true);
     formdata.thumbnail = selImage;
     formdata.file = selFile;
@@ -66,11 +74,12 @@ const AddVideo = () => {
         "Content-Type": "application/json",
       },
     });
+
     if (response.status === 200) {
       console.log("Success");
       Swal.fire({
         title: "Success",
-        text: "Video added successfully😁👍",
+        text: "Video Downloaded successfully😁👍",
         icon: "success",
       });
       // getDataFromBackend();
@@ -87,7 +96,7 @@ const AddVideo = () => {
 
   const downloadYoutubeVideo = () => {
     return (
-      <div className="card">
+      <div className="card mt-5">
         <div className="card-body">
           <h3>Enter Youtube URL to Add Video</h3>
           <input className="form-control" ref={videoUrlRef} />
@@ -95,7 +104,7 @@ const AddVideo = () => {
             className="btn btn-primary mt-3"
             onClick={async (e) => {
               console.log(videoUrlRef.current.value);
-              const res = fetch("http://localhost:5000/video/savefromyoutube", {
+              const res = await fetch("http://localhost:5000/video/savefromyoutube", {
                 method: "POST",
                 body: JSON.stringify({
                   url: videoUrlRef.current.value,
@@ -106,12 +115,15 @@ const AddVideo = () => {
                 },
               });
 
+              console.log(res.status);
+
               if (res.status === 200) {
                 Swal.fire({
                   title: "Success",
                   text: "Video added successfully😁👍",
                   icon: "success",
                 });
+                navigate('/user/managevideo');
               }
             }}
           >
@@ -129,7 +141,7 @@ const AddVideo = () => {
       exit={{ opacity: 0.5, x: -300 }}
       transition={{ type: "keyframes" }}
       className="container-fluid"
-      style={{backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')"}}
+      style={{ backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')" }}
     >
       <section className="header-top addvideo-header-bg" >
         <h1 className="header-text">Add New Video</h1>
@@ -203,6 +215,11 @@ const AddVideo = () => {
             </form>
           )}
         </Formik>
+
+
+      </div>
+      <h1 className="text-center my-3">OR</h1>
+      <div className="container">
 
         {
           downloadYoutubeVideo()
