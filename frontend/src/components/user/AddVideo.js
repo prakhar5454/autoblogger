@@ -141,7 +141,7 @@ const AddVideo = () => {
       exit={{ opacity: 0.5, x: -300 }}
       transition={{ type: "keyframes" }}
       className="container-fluid"
-      style={{ backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')" }}
+      style={{ backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiRh9tl2bdJz_lNPbOu-AUXl3k01ragl34xnrdS2OgA&usqp=CAU&ec=48665701')"}}
     >
       <section className="header-top addvideo-header-bg" >
         <h1 className="header-text">Add New Video</h1>
@@ -179,7 +179,7 @@ const AddVideo = () => {
               </div>
               <div className=" mb-4 d-flex justify-content-evenly align-item-center">
                 <Button variant="contained" component="label">
-                  <i className="fas fa-upload   "></i> &nbsp; Upload Video
+                  <i className="fas fa-upload "></i> &nbsp; Upload Video
                   <input
                     hidden
                     accept="video/*"

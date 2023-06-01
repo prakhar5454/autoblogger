@@ -161,7 +161,7 @@ const VideoManager = () => {
       </section>
       <section>
         <div className="col-md-10 mx-auto">
-          <div className="row mt-3 mb-5">
+          <div className="row mt-10 mb-5">
             <div className="col-md-3 mt-4">
               <Link to="/user/addvideo">
                 <div className="card h-100">
